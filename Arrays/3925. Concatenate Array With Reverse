@@ -1,0 +1,17 @@
+class Solution {
+    public int[] concatWithReverse(int[] nums) {
+        int n=nums.length;
+        int[] arr=new int[2*n];
+        int left=0;
+        int right=arr.length-1;
+        while(left<right)
+        {
+            arr[left]=nums[left];
+            arr[right]=nums[left];
+            left++;
+            right--;
+        }
+        return arr;
+        
+    }
+}
